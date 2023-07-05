@@ -6,7 +6,7 @@ ms.author: jacobjaygbay
 ms.service: baremetal-infrastructure
 ms.custom: references_regions
 ms.topic: conceptual
-ms.date: 06/01/2023
+ms.date: 07/05/2023
 ---
 
 #  What is Azure Large Instances?
