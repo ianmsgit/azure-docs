@@ -37,7 +37,7 @@ Install a red hat satellite server in a VM for RHEL 8.4 and patch download.
 
 ## ALI for Epic stamps
 
-* Validate ALI for Epic stamps and configure and patch OS based on your requirements.  
+* Validate ALI for Epic servers and configure and patch OS based on your requirements.  
 * Verify that the stamps are visible on Azure portal.
 
   > [!Note]
