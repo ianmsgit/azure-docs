@@ -6,6 +6,7 @@ author: jjaygbay1
 ms.author: jacobjaygbay
 ms.service: baremetal-infrastructure
 ms.date: 06/01/2023
+ms.custom: reference_regions
 ---
 
 # Available SKUs
@@ -20,7 +21,7 @@ ms.date: 06/01/2023
 * South Central US
 * West US 2 with Zones support
 
-Azure Large Instances (ALI) for Epic has limited availability currently in the following regions:
+Azure Large Instances (ALI) for Epic has limited availability. ALI is currently available in the following regions:
 
 * East US with Zones support
 * South Central US
