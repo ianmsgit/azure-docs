@@ -38,7 +38,7 @@ Install a red hat satellite server in a VM for RHEL 8.4 and patch download.
 ## ALI for Epic stamps
 
 * Validate ALI for Epic stamps and configure and patch OS based on your requirements.  
-* Verify that the stamps are visible on Azure portal.
+* Verify the servers are visible on Azure portal.
 
   > [!Note]
   > Do *not* place large files like ALI for Epic installation bits on the boot volume. The Boot volume is small and can fill quickly, which could cause the server to hang (50 GB per OS is the boot limit).
