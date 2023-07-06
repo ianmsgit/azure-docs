@@ -117,23 +117,17 @@ Replace the values with your subscription values.
 ```azurecli
 $Sub1 = "Replace_With_Your_Subcription_Name"  
 
-$RG1 = "TestRG1"  
+$RG1 = "Your_Resource_Group_Name"  
 
-$Location1 = "East US"  
+$CiruitName = "ExpressRoute Circuit Name"
 
-$GWName1 = "VNet1GW"  
+$Location1 = "Location_Name" #Example: "East US"
 
-$Authkey = “Express route circuit auth key”  
+$GWName1 = "VNET_Gateway_Name"    
 
-$Sub1 = "Replace_With_Your_Subcription_Name"  
+$ConnectionName = "ER Gateway Connection Name"
 
-$RG1 = "TestRG1"  
-
-$Location1 = "East US"  
-
-$GWName1 = "VNet1GW"  
-
-$Authkey = “Express route circuit auth key”  
+$Authkey = "ExpressRoute Circuit Authorization Key"  
 ```
   
 ### Connect to your account
@@ -142,36 +136,36 @@ $Authkey = “Express route circuit auth key” 
 Connect-AzureRmAccount  
 ```
   
-#### Check the subscriptions for the account
+#### Check the subscription for the account
 
 ```azurecli
-Get-AzureRmSubscription  
+Get-AZSubscription
 ```
 
-#### Specify the subscription that you want to use
+#### Select the subscription you want to use
 
 ```azurecli
-Select-AzureRmSubscription -SubscriptionName $Sub1  
+Select-AZSubscription - SubscriptionId $Sub1  
 ```
   
-### Enable ExpressRoute fast path on the gateway connection  
+Enable ExpressRoute fast path on the gateway connection.  
 
-#### Declare a variable for the gateway object
+#### Declare variable for ExpressRoute circuit
 
 ```azurecli
-$gw = Get-AzureRmVirtualNetworkGateway -Name $GWName1 -ResourceGroupName $RG1  
+$circuit = Get-AzExpressRouteCircuit -Name $CiruitName -ResourceGroupName $RG1 
 ```
 
-#### Declare a variable for the Express route circuit ID
+#### Declare variable for gateway
 
 ```azurecli
-$id = "/subscriptions/”express route subscrioption ID”/resourceGroups/”ER resource group”/providers/Microsoft.Network/expressRouteCircuits/”circuit”  
+$gw = Get-AzVirtualNetworkGateway -Name $GWName1 -ResourceGroupName $RG1 
 ```
 
 #### Enable MSEEv2 using the **ExpressRouteGatewayBypass** flag
 
 ```azurecli
-New-AzureRmVirtualNetworkGatewayConnection -Name "Virtual Gateway connection name" -ResourceGroupName $RG1 -Location $Location1 -VirtualNetworkGateway1 $gw -PeerId $id -AuthorizationKey $Authkey -ConnectionType ExpressRoute -ExpressRouteGatewayBypass   
+$connection = New-AzVirtualNetworkGatewayConnection -Name $ConnectionName -ResourceGroupName $RG1 -ExpressRouteGatewayBypass -VirtualNetworkGateway1 $gw -PeerId $circuit.Id -ConnectionType ExpressRoute -Location $Location1 -AuthorizationKey $Authkey  
 ```
   
 ### Enable Accelerated Networking on VMs
