@@ -44,7 +44,7 @@ Azure was the first to offer such solutions and has since led with the largest p
 ALI is intended for critical workloads that require certification to run your enterprise applications. 
 Azure Large Instances implementations are dedicated only to you, and you'll have full access (root access) to the operating system (OS).
 You manage OS and application installation according to your needs.
-For security, the instances are provisioned within your Azure Virtual Network (VNet) with no internet connectivity.
+For security, the instances are provisioned within your Azure Virtual Network (VNet) with no internet connectivity. If you need access to the internet, you'll need to setup an internet proxy service.
 Only services running on your virtual machines (VMs), and other Azure services in same Tier 2 network, can communicate with your implementation of ALI.
 
 ALI offers these benefits:
