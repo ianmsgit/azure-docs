@@ -101,7 +101,7 @@ This new resource group lists the ALI you've deployed in that subscription.
 To see all your ALI instances, run the [az baremetalinstance list](/cli/azure/baremetalinstance#az-baremetalinstance-list) command for your resource group:
 
 ```azurecli
-az baremetalinstance list --resource-group DSM05A-T550 –output table
+az baremetalinstance list --resource-group MyResourceGroup –output table
 ```
 
 > [!TIP]
@@ -141,7 +141,7 @@ Use the proximity placement group associated with the ALI instance to ensure the
 To see details of an ALI instance, run the [az baremetalinstance show](/cli/azure/baremetalinstance#az-baremetalinstance-show) command:
 
 ```azurecli
-az baremetalinstance show --resource-group DSM05A-T550 --instance-name orcllabdsm01
+az baremetalinstance show --resource-group MyResourceGroup --instance-name MyALIinstanceName
 ```
 
 If you're uncertain of the instance name, run the **az baremetalinstance list** command as previously described.
@@ -189,13 +189,13 @@ Tags have the same restrictions for ALI instances as for VMs.
 To add tags to an ALI instance, run the [az baremetalinstance update](/cli/azure/baremetalinstance#az-baremetalinstance-update) command:
 
 ```azurecli
-az baremetalinstance update --resource-group DSM05a-T550 --instance-name orcllabdsm01 --set tags.Dept=Finance tags.Status=Normal
+az baremetalinstance update --resource-group MyResourceGroup --instance-name MyALIinstanceName --set tags.Dept=Finance tags.Status=Normal
 ```
 
 Use the same command to remove a tag:
 
 ```azurecli
-az baremetalinstance update --resource-group DSM05a-T550 --instance-name orcllabdsm01 --remove tags.Dept
+az baremetalinstance update --resource-group MyResourceGroup --instance-name MyALIinstanceName --remove tags.Dept
 ```
 
 ---
@@ -236,7 +236,7 @@ As a result, after a restart, you can only log into the unit once the state swit
 To restart an ALI instance, use the [az baremetalinstance restart](/cli/azure/baremetalinstance#az-baremetalinstance-restart) command:
 
 ```azurecli
-az baremetalinstance restart --resource-group --instance-name 
+az baremetalinstance restart --resource-group MyResourceGroup --instance-name MyALIinstanceName
 ```
 
 ---
