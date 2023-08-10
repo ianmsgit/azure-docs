@@ -45,6 +45,8 @@ The following table describes what’s supported for each network features confi
 |[Network Security Groups](../../../virtual-network/network-security-groups-overview.md) on NC2 on Azure-delegated subnets|No|
 |[User-defined routes (UDRs)](../../../virtual-network/virtual-networks-udr-overview.md#user-defined) on NC2 on Azure-delegated subnets|No|
 |Connectivity to [private endpoints](../../../private-link/private-endpoint-overview.md) from resources on Azure-delegated subnets|No|
+|Connectivity to private endpoints from resources on Azure-delegated subnets|No|
+|Connectivity to private endpoints from resources on a different spoke Vnet connected to vWAN|Yes|
 |Load balancers for NC2 on Azure traffic|No|
 |Dual stack (IPv4 and IPv6) virtual network|IPv4 only supported|
 
