@@ -84,19 +84,20 @@ NC2 on Azure requires manual escalation to request, approve and deliver ESI keys
 
 #### To request ESI keys
 
-1. Draft an email that is sent to your Microsoft Account team, The email should contain the following:
-   1. Your contact information in the body of the email
-   1. Customer name and TPID
-   1. Specific Deployment Scenario: Nutanix Cloud Clusters on Azure
-   1. Number of Servers, nodes, or both where applicable (for example,HUB) requested to be covered by ESUs
-   1. Point of Contact: Name and email address of a customer employee who can either install or manage the keys once provided. Manage in this context means ensuring that
-      1. Keys are not disclosed to anyone outside of the client company
-      2. Keys are not publicly exposed
+1. Send email to your Microsoft Account team. The email should contain the following:
+   - Your contact information in the body of the email
+   - Customer name and TPID
+   - Specific Deployment Scenario: Nutanix Cloud Clusters on Azure
+   - Number of Servers, nodes, or both where applicable (for example,HUB) requested to be covered by ESUs
+   - Point of Contact: Name and email address of a customer employee who can either install or manage the keys once provided. Manage in this context means ensuring that
+     - Keys are not disclosed to anyone outside of the client company
+     - Keys are not publicly exposed
+
 1.  Do not cc the customer at this stage. The MSFT response will include the ESU Keys and the following language:
 
->> **Terms of Use**
-
->> By activating this key you agree that it will only be used for only NC1 on Azure. If you violate these terms, we may stop providing services to you or we may close your Microsoft account.
+    > **Terms of Use**
+    > 
+    > By activating this key you agree that it will only be used for only NC1 on Azure. If you violate these terms, we may stop providing services to you or we may close your Microsoft account.
 
 For any questions on Azure Hybrid Benefits, please contact your Microsoft Account Executive.
 
